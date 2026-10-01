@@ -1,1243 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hassan Raza - Professional Mobile App Developer. Specializing in Android, iOS, and Cross-platform development">
-    <meta name="keywords" content="Mobile Developer, Android, iOS, Flutter, React Native, Kotlin, Swift">
-    <meta name="author" content="Hassan Raza">
-    <title>Hassan Raza | Mobile App Developer Portfolio</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #667eea;
-            --primary-dark: #5568d3;
-            --secondary: #764ba2;
-            --dark-bg: #0f1419;
-            --card-bg: #1a1f26;
-            --border-color: rgba(255, 255, 255, 0.1);
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ============ NAVBAR ============ */
-        .navbar {
-            background: rgba(15, 20, 25, 0.95);
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            color: var(--primary);
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* ============ HERO SECTION ============ */
-        .hero {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            border-bottom: 1px solid var(--border-color);
-            padding: 120px 0 80px;
-            margin-top: 60px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(102, 126, 234, 0.1), transparent);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(118, 75, 162, 0.1), transparent);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .hero-desc {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            line-height: 1.8;
-            max-width: 500px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(102, 126, 234, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(102, 126, 234, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            border: 1px solid var(--border-color);
-        }
-
-        .social-links a:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-image-wrapper {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 120px;
-            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        /* ============ SECTIONS ============ */
-        section {
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        section:nth-child(odd) {
-            background: var(--dark-bg);
-        }
-
-        section:nth-child(even) {
-            background: var(--card-bg);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 50px;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 2px;
-        }
-
-        /* ============ ABOUT SECTION ============ */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 60px;
-            align-items: start;
-            margin-top: 50px;
-        }
-
-        .about-text {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-        }
-
-        .about-text strong {
-            color: var(--primary);
-        }
-
-        .about-list {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .about-list li {
-            padding: 12px 0;
-            color: var(--text-secondary);
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            font-size: 0.95rem;
-        }
-
-        .about-list li::before {
-            content: '✓';
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-
-        .stat-card {
-            background: rgba(102, 126, 234, 0.05);
-            border: 1px solid var(--border-color);
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .stat-card:hover {
-            background: rgba(102, 126, 234, 0.1);
-            border-color: var(--primary);
-            transform: translateY(-5px);
-        }
-
-        .stat-card h3 {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .stat-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        /* ============ SKILLS SECTION ============ */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .skill-category {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            padding: 30px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .skill-category:hover {
-            border-color: var(--primary);
-            background: rgba(102, 126, 234, 0.05);
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: rgba(102, 126, 234, 0.15);
-            color: var(--primary);
-            padding: 8px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .skill-tag:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
-        /* ============ PROJECTS SECTION ============ */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            border-color: var(--primary);
-            background: rgba(102, 126, 234, 0.05);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
-        }
-
-        .project-image {
-            position: relative;
-            overflow: hidden;
-            height: 200px;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-
-        .project-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-content h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .project-desc {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .project-tech span {
-            background: rgba(102, 126, 234, 0.1);
-            color: var(--primary);
-            padding: 5px 10px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .project-links a {
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            color: var(--secondary);
-        }
-
-        /* ============ EXPERIENCE SECTION ============ */
-        .timeline {
-            position: relative;
-            padding: 30px 0;
-            margin-top: 50px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-        }
-
-        .timeline-item {
-            margin-bottom: 50px;
-            width: 45%;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) {
-            margin-left: 0;
-            text-align: right;
-            padding-right: 50px;
-        }
-
-        .timeline-item:nth-child(even) {
-            margin-left: 55%;
-            padding-left: 50px;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 15px;
-            height: 15px;
-            background: var(--primary);
-            border: 3px solid var(--dark-bg);
-            border-radius: 50%;
-            top: 0;
-            z-index: 10;
-        }
-
-        .timeline-content {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            padding: 25px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            border-color: var(--primary);
-            background: rgba(102, 126, 234, 0.05);
-        }
-
-        .timeline-content h3 {
-            color: var(--primary);
-            margin-bottom: 5px;
-            font-size: 1.1rem;
-        }
-
-        .company {
-            color: var(--text-secondary);
-            font-weight: 500;
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-        }
-
-        .date {
-            color: #666;
-            font-size: 0.85rem;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            font-size: 0.9rem;
-        }
-
-        /* ============ CONTACT SECTION ============ */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-            margin-top: 50px;
-        }
-
-        .contact-info h3 {
-            color: var(--primary);
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-
-        .contact-info > p {
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-            line-height: 1.8;
-        }
-
-        .contact-details {
-            margin-bottom: 40px;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 25px;
-            align-items: flex-start;
-        }
-
-        .contact-item h4 {
-            color: var(--primary);
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
-
-        .contact-item p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .contact-item a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: var(--primary);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(102, 126, 234, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-            text-decoration: none;
-        }
-
-        .social-icon:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .form-group {
-            width: 100%;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 16px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 0.95rem;
-            font-family: inherit;
-            transition: all 0.3s ease;
-            resize: none;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: #555;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: rgba(102, 126, 234, 0.05);
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        /* ============ FOOTER ============ */
-        .footer {
-            background: #0a0d10;
-            color: var(--text-secondary);
-            text-align: center;
-            padding: 40px 0;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .footer p {
-            margin: 5px 0;
-            font-size: 0.9rem;
-        }
-
-        /* ============ RESPONSIVE ============ */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-image-wrapper {
-                width: 250px;
-                height: 250px;
-                font-size: 80px;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline::before {
-                left: 0;
-            }
-
-            .timeline-item {
-                width: 100%;
-            }
-
-            .timeline-item:nth-child(odd),
-            .timeline-item:nth-child(even) {
-                margin-left: 0;
-                padding-right: 0;
-                padding-left: 50px;
-                text-align: left;
-            }
-
-            .timeline-marker {
-                left: 0;
-                transform: translateX(-7.5px);
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hassan Raza | Mobile App Developer</title>
+  <meta name="description" content="Portfolio of Hassan Raza, Mobile App Developer specializing in Android, iOS, Flutter, and UI/UX." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg2:#111827;
+      --panel:#121a2b;
+      --panel-2:#172033;
+      --muted:#9aa7bd;
+      --text:#edf3ff;
+      --primary:#7c6cff;
+      --primary-2:#4fd1c5;
+      --accent:#ff7b7b;
+      --line:rgba(255,255,255,0.08);
+      --shadow:0 25px 60px rgba(31,41,55,.45);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0; font-family:'Inter',sans-serif; background:linear-gradient(180deg,#0b1020 0%,#0d1325 100%); color:var(--text); line-height:1.7;}
+    a{text-decoration:none; color:inherit}
+    img{max-width:100%; display:block}
+    .container{width:min(1180px, calc(100% - 32px)); margin:0 auto}
+    .section{padding:110px 0}
+    .badge{display:inline-flex; align-items:center; gap:8px; background:rgba(124,108,255,.12); color:#d9d2ff; border:1px solid rgba(124,108,255,.35); border-radius:999px; padding:10px 16px; font-size:.8rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase}
+    .title{font-size:clamp(2.2rem,4vw,4rem); letter-spacing:-.05em; margin:20px 0 14px; line-height:1.06}
+    .subtitle{color:var(--muted); max-width:650px; font-size:1.08rem}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:10px; border-radius:14px; padding:16px 24px; font-weight:700; transition:.25s ease; border:1px solid transparent}
+    .btn-primary{background:linear-gradient(135deg,var(--primary),#9a7dff); color:#fff; box-shadow:var(--shadow)}
+    .btn-primary:hover{transform:translateY(-2px); box-shadow:0 18px 38px rgba(124,108,255,.45)}
+    .btn-light{background:rgba(255,255,255,.03); border-color:var(--line); color:var(--text)}
+    .btn-light:hover{background:rgba(255,255,255,.06)}
+    .grid{display:grid; gap:24px}
+
+    .nav-wrap{position:sticky; top:0; z-index:50; backdrop-filter:blur(18px); background:rgba(11,16,32,.72); border-bottom:1px solid var(--line)}
+    .nav{display:flex; align-items:center; justify-content:space-between; min-height:82px}
+    .brand{display:flex; align-items:center; gap:12px; font-size:1.1rem; font-weight:800; letter-spacing:-.04em}
+    .brand-mark{width:42px; height:42px; display:grid; place-items:center; border-radius:12px; background:linear-gradient(135deg,var(--primary),var(--primary-2)); box-shadow:0 12px 28px rgba(124,108,255,.45)}
+    .nav-links{display:flex; align-items:center; gap:26px; color:var(--muted); font-size:.95rem}
+    .nav-links a:hover{color:var(--text)}
+    .menu-btn{display:none}
+
+    .hero{padding:90px 0 60px; position:relative; overflow:hidden}
+    .hero::before, .hero::after{content:""; position:absolute; border-radius:50%; filter:blur(90px); opacity:.5; pointer-events:none}
+    .hero::before{width:420px; height:420px; background:rgba(124,108,255,.22); right:-120px; top:40px}
+    .hero::after{width:380px; height:380px; background:rgba(79,209,197,.18); left:-120px; bottom:-60px}
+    .hero-grid{display:grid; grid-template-columns:1.3fr .9fr; gap:40px; align-items:center; position:relative; z-index:1}
+    .hero-copy .title span{background:linear-gradient(135deg,#fff,#b8a8ff); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .hero-copy p{color:var(--muted); max-width:620px; font-size:1.14rem}
+    .hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-top:28px}
+    .hero-meta{display:flex; flex-wrap:wrap; gap:18px; margin-top:28px; color:var(--muted)}
+    .meta-box{display:flex; align-items:center; gap:10px; padding:10px 12px; background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:12px}
+    .meta-box i{color:var(--primary-2)}
+
+    .profile-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02)); border:1px solid var(--line); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .profile-visual{height:420px; border-radius:22px; background:linear-gradient(145deg,#1c2743,#0f172a 55%,#151d33); position:relative; overflow:hidden; border:1px solid rgba(255,255,255,.12)}
+    .profile-visual::before{content:""; position:absolute; width:220px; height:220px; right:-40px; top:-30px; border-radius:50%; background:radial-gradient(circle, rgba(124,108,255,.7), transparent 70%)}
+    .profile-visual::after{content:""; position:absolute; width:220px; height:220px; left:-30px; bottom:-20px; border-radius:50%; background:radial-gradient(circle, rgba(79,209,197,.52), transparent 68%)}
+    .avatar{position:absolute; inset:0; display:grid; place-items:center; font-size:160px; filter:drop-shadow(0 20px 40px rgba(0,0,0,.35)); z-index:1}
+    .mini-card{position:absolute; background:rgba(15,23,42,.82); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px 18px; backdrop-filter:blur(12px); z-index:2}
+    .mini-card .label{font-size:.72rem; text-transform:uppercase; color:var(--muted); letter-spacing:.1em}
+    .mini-card .value{font-weight:800; font-size:1.3rem; margin-top:6px}
+    .mini-card.one{top:32px; left:18px}
+    .mini-card.two{bottom:30px; right:18px}
+
+    .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:30px}
+    .stat{padding:22px 18px; background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:18px; text-align:center}
+    .stat strong{display:block; font-size:clamp(1.4rem,2vw,2.2rem); margin-bottom:8px; color:#fff}
+    .stat span{color:var(--muted); font-size:.92rem}
+
+    .header-block{margin-bottom:34px}
+    .section-inline{display:flex; align-items:end; justify-content:space-between; gap:22px; margin-bottom:32px}
+    .section-inline .subtitle{margin:0}
+
+    .about-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:stretch}
+    .glass{background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:var(--radius); padding:28px}
+    .about-copy{font-size:1.05rem; color:var(--muted); display:grid; gap:18px}
+    .about-copy strong{color:var(--text)}
+    .feature-list{display:grid; gap:16px; margin-top:10px}
+    .feature-item{display:flex; gap:14px; align-items:flex-start; background:rgba(124,108,255,.04); border:1px solid rgba(124,108,255,.15); border-radius:16px; padding:16px 18px}
+    .feature-item i{margin-top:2px; color:var(--primary-2); font-size:1.1rem}
+    .feature-item p{margin:0; color:var(--muted)}
+
+    .stack-grid{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18px}
+    .stack-card{background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:18px; padding:22px}
+    .stack-card h3{margin:0 0 16px; font-size:1.1rem}
+    .tag-list{display:flex; flex-wrap:wrap; gap:10px}
+    .tag{padding:8px 12px; border-radius:999px; background:rgba(79,209,197,.08); border:1px solid rgba(79,209,197,.18); color:#c6fff8; font-size:.8rem; font-weight:600}
+
+    .service-grid{display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:22px; margin-top:20px}
+    .service-card{padding:26px; background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:22px; transition:.25s ease}
+    .service-card:hover{transform:translateY(-5px); border-color:rgba(124,108,255,.4); box-shadow:0 18px 38px rgba(17,24,39,.35)}
+    .icon-wrap{width:58px; height:58px; display:grid; place-items:center; border-radius:16px; background:linear-gradient(135deg, rgba(124,108,255,.18), rgba(79,209,197,.10)); color:var(--primary-2); font-size:1.28rem; margin-bottom:18px}
+    .service-card h3{margin:0 0 10px; font-size:1.2rem}
+    .service-card p{margin:0; color:var(--muted)}
+
+    .project-grid{display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:22px; margin-top:28px}
+    .project-card{overflow:hidden; background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:22px; transition:.25s ease}
+    .project-card:hover{transform:translateY(-6px); border-color:rgba(124,108,255,.45)}
+    .project-thumb{height:220px; display:grid; place-items:center; font-size:5rem; background:linear-gradient(135deg, rgba(124,108,255,.16), rgba(79,209,197,.08)); border-bottom:1px solid var(--line)}
+    .project-body{padding:22px}
+    .project-body h3{margin:0 0 10px; font-size:1.18rem}
+    .project-body p{margin:0 0 16px; color:var(--muted)}
+    .project-tags{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px}
+    .project-tags span{padding:7px 10px; border-radius:999px; background:rgba(124,108,255,.08); color:#d9d2ff; border:1px solid rgba(124,108,255,.18); font-size:.74rem; font-weight:600}
+    .project-links{display:flex; gap:14px}
+    .project-links a{color:var(--primary-2); font-weight:700; font-size:.9rem}
+
+    .timeline{display:grid; gap:22px; margin-top:30px}
+    .timeline-item{position:relative; padding-left:34px; margin-left:12px; border-left:2px solid rgba(124,108,255,.42)}
+    .timeline-item::before{content:""; position:absolute; left:-9px; top:6px; width:16px; height:16px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--primary-2)); box-shadow:0 0 0 4px rgba(124,108,255,.12)}
+    .timeline-card{background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:18px; padding:22px}
+    .timeline-card h3{margin:0 0 8px; font-size:1.2rem}
+    .timeline-card .meta{color:var(--primary-2); font-weight:700; margin-bottom:8px}
+    .timeline-card .time{color:var(--muted); font-size:.9rem; margin-bottom:8px}
+    .timeline-card p{margin:0; color:var(--muted)}
+
+    .contact-wrap{display:grid; grid-template-columns:1.04fr .96fr; gap:30px; align-items:start}
+    .contact-box, .form-box{background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:22px; padding:28px}
+    .contact-list{display:grid; gap:16px; margin-top:20px}
+    .contact-item{display:flex; gap:14px; align-items:flex-start; padding:16px 18px; border-radius:14px; background:rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.04)}
+    .contact-item i{width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:rgba(124,108,255,.1); color:var(--primary-2); font-size:1.1rem}
+    .contact-item h4{margin:0 0 4px; font-size:1rem}
+    .contact-item a, .contact-item span{color:var(--muted); font-size:.96rem}
+    .socials{display:flex; gap:12px; margin-top:20px; flex-wrap:wrap}
+    .socials a{width:46px; height:46px; display:grid; place-items:center; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--text)}
+    .socials a:hover{border-color:rgba(124,108,255,.35); color:var(--primary-2)}
+
+    form{display:grid; gap:16px}
+    input, textarea{width:100%; border:1px solid var(--line); background:rgba(255,255,255,.03); color:var(--text); border-radius:14px; padding:16px 18px; font:inherit; outline:none}
+    input::placeholder, textarea::placeholder{color:#7b869c}
+    input:focus, textarea:focus{border-color:rgba(124,108,255,.55); box-shadow:0 0 0 4px rgba(124,108,255,.1)}
+    textarea{min-height:150px; resize:vertical}
+
+    footer{padding:28px 0 60px; color:var(--muted); text-align:center; border-top:1px solid var(--line)}
+
+    @media (max-width: 980px){
+      .hero-grid, .about-grid, .contact-wrap{grid-template-columns:1fr}
+      .service-grid{grid-template-columns:repeat(2, minmax(0,1fr))}
+      .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .stats{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width: 760px){
+      .nav-links{display:none}
+      .menu-btn{display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:10px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--text)}
+      .service-grid, .project-grid, .stats{grid-template-columns:1fr}
+      .profile-visual{height:360px}
+      .section{padding:90px 0}
+      .title{font-size:2.5rem}
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">
-                <span>💻</span>
-                <span>Hassan Raza</span>
-            </a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <div class="nav-wrap">
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <div class="brand-mark"><i class="fa-solid fa-code"></i></div>
+        <span>Hassan Raza</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Hi, I'm Hassan Raza</h1>
-                    <p class="hero-subtitle">Mobile App Developer</p>
-                    <p class="hero-desc">I create beautiful, scalable, and user-friendly mobile applications for iOS and Android. Specialized in Kotlin, Swift, Flutter, and React Native.</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/Razhy12" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/hassan-raza" target="_blank" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com/YourHandle" target="_blank" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com/YourHandle" target="_blank" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-image-wrapper">📱</div>
-                </div>
-            </div>
+  <header id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="badge"><i class="fa-solid fa-rocket"></i> Available for work</div>
+        <h1 class="title">Hi, I’m Hassan Raza <span>Mobile App Developer</span></h1>
+        <p>I build clean, high-performing mobile apps for Android and iOS, blending user experience, performance, and business-focused design into every product.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-light">Hire Me</a>
         </div>
+        <div class="hero-meta">
+          <div class="meta-box"><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</div>
+          <div class="meta-box"><i class="fa-solid fa-envelope"></i> luckyhassanbhutto@gmail.com</div>
+        </div>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-visual">
+          <div class="avatar">📱</div>
+          <div class="mini-card one">
+            <div class="label">Projects</div>
+            <div class="value">50+</div>
+          </div>
+          <div class="mini-card two">
+            <div class="label">Playback</div>
+            <div class="value">4.8★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="header-block">
+          <div class="badge">About</div>
+          <h2 class="title" style="font-size:clamp(2rem,3.6vw,3.2rem);">A developer focused on product quality.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass about-copy">
+            <p>Hello! I’m <strong>Hassan Raza</strong>, a mobile app developer passionate about building modern applications that are simple, beautiful, and responsive.</p>
+            <p>I enjoy turning ideas into reliable mobile experiences for Android, iOS, and cross-platform products. My work focuses on performance, clean architecture, and strong user interfaces.</p>
+            <div class="feature-list">
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i>
+                <p><strong>Native apps:</strong> Kotlin, Java, Swift, and modern mobile architecture.</p>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i>
+                <p><strong>Cross-platform:</strong> Flutter and React Native for fast product delivery.</p>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-check"></i>
+                <p><strong>Modern workflow:</strong> Firebase, APIs, UI systems, and clean code practices.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-grid">
+            <div class="stack-card">
+              <h3>Android</h3>
+              <div class="tag-list">
+                <span class="tag">Kotlin</span>
+                <span class="tag">Java</span>
+                <span class="tag">Jetpack</span>
+                <span class="tag">MVVM</span>
+                <span class="tag">Firebase</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <h3>iOS</h3>
+              <div class="tag-list">
+                <span class="tag">Swift</span>
+                <span class="tag">SwiftUI</span>
+                <span class="tag">UIKit</span>
+                <span class="tag">CoreData</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <h3>Web / Cross</h3>
+              <div class="tag-list">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">React Native</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <h3>Backend</h3>
+              <div class="tag-list">
+                <span class="tag">Node.js</span>
+                <span class="tag">REST API</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><strong>50+</strong><span>Projects</span></div>
+          <div class="stat"><strong>100K+</strong><span>Downloads</span></div>
+          <div class="stat"><strong>4.8★</strong><span>Ratings</span></div>
+          <div class="stat"><strong>3+ yrs</strong><span>Experience</span></div>
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hello! I'm Hassan Raza, a passionate mobile app developer based in <strong>Karachi, Pakistan</strong>. I have expertise in developing native and cross-platform mobile applications that provide excellent user experiences.</p>
-                    <p>With a strong foundation in computer science and hands-on experience with modern development frameworks, I enjoy solving complex problems and building applications that make a real impact.</p>
-                    
-                    <p><strong>What I Specialize In:</strong></p>
-                    <ul class="about-list">
-                        <li>Native Android Development (Kotlin & Java)</li>
-                        <li>Native iOS Development (Swift)</li>
-                        <li>Cross-Platform Development (Flutter)</li>
-                        <li>React Native Applications</li>
-                        <li>UI/UX Implementation</li>
-                        <li>Backend Integration & APIs</li>
-                        <li>Firebase & Cloud Services</li>
-                        <li>Performance Optimization</li>
-                    </ul>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>50+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>100K+</h3>
-                        <p>Total App Downloads</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>4.8★</h3>
-                        <p>Average Rating</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>3+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                </div>
-            </div>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-inline">
+          <div>
+            <div class="badge">Services</div>
+            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">What I do best</h2>
+          </div>
+          <p class="subtitle">I help brands and startups turn ideas into polished mobile experiences with strong design and technical execution.</p>
         </div>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="icon-wrap"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3>Mobile App Development</h3>
+            <p>From concept to launch, I build Android and iOS applications with a focus on usability and performance.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>UI/UX Design</h3>
+            <p>Modern, user-friendly interfaces designed for retention, clarity, and stronger engagement.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><i class="fa-solid fa-code"></i></div>
+            <h3>App Optimization</h3>
+            <p>Improve speed, stability, and maintainability using best practices and scalable architecture.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>🤖 Android Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Kotlin</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Jetpack Compose</span>
-                        <span class="skill-tag">MVVM</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">Room Database</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>🍎 iOS Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Swift</span>
-                        <span class="skill-tag">SwiftUI</span>
-                        <span class="skill-tag">UIKit</span>
-                        <span class="skill-tag">CoreData</span>
-                        <span class="skill-tag">AVFoundation</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>🔄 Cross-Platform</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Flutter</span>
-                        <span class="skill-tag">Dart</span>
-                        <span class="skill-tag">React Native</span>
-                        <span class="skill-tag">JavaScript</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>⚙️ Backend & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Firebase</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">Git</span>
-                    </div>
-                </div>
-            </div>
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-inline">
+          <div>
+            <div class="badge">Projects</div>
+            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">Selected work</h2>
+          </div>
+          <p class="subtitle">A few examples of product-focused apps and digital experiences I’ve built.</p>
         </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-thumb">📋</div>
+            <div class="project-body">
+              <h3>MyFirstAndroidApp</h3>
+              <p>Islamic reminder app with a clean user interface and practical daily features for the user.</p>
+              <div class="project-tags">
+                <span>Kotlin</span>
+                <span>Android</span>
+                <span>UI/UX</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Razhy12/MyFirstAndroidApp" target="_blank">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">🎨</div>
+            <div class="project-body">
+              <h3>Code With Hassan Portfolio</h3>
+              <p>Professional portfolio website built for showcasing projects, services, and personal branding.</p>
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Razhy12/code-with-hassan-portfolio" target="_blank">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-thumb">💪</div>
+            <div class="project-body">
+              <h3>FitTracker Pro</h3>
+              <p>Fitness app concept built for tracking workouts, goals, and user progress with a premium feel.</p>
+              <div class="project-tags">
+                <span>Flutter</span>
+                <span>Firebase</span>
+                <span>Dart</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Razhy12" target="_blank">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">📋</div>
-                    <div class="project-content">
-                        <h3>MyFirstAndroidApp</h3>
-                        <p class="project-desc">A modern Android Islamic reminder app built with Kotlin. Features prayer times, Quranic verses, and Islamic calendar integration.</p>
-                        <div class="project-tech">
-                            <span>Kotlin</span>
-                            <span>Android</span>
-                            <span>Material Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Razhy12/MyFirstAndroidApp" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="https://github.com/Razhy12/MyFirstAndroidApp" target="_blank">
-                                <i class="fas fa-play"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">🎨</div>
-                    <div class="project-content">
-                        <h3>Code With Hassan Portfolio</h3>
-                        <p class="project-desc">Professional portfolio website for code tutorials and development services. Showcasing projects and expertise in web and mobile development.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Razhy12/code-with-hassan-portfolio" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">💪</div>
-                    <div class="project-content">
-                        <h3>FitTracker Pro</h3>
-                        <p class="project-desc">Comprehensive fitness tracking application with workout logging, progress analytics, and personalized recommendations. Built with Flutter for cross-platform compatibility.</p>
-                        <div class="project-tech">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                            <span>Dart</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Razhy12" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">🛍️</div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p class="project-desc">Full-featured e-commerce application with product catalog, shopping cart, secure payments, and order tracking using React Native.</p>
-                        <div class="project-tech">
-                            <span>React Native</span>
-                            <span>Node.js</span>
-                            <span>Firebase</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Razhy12" target="_blank">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-inline">
+          <div>
+            <div class="badge">Experience</div>
+            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">Career journey</h2>
+          </div>
         </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <h3>Senior Mobile App Developer</h3>
+              <div class="meta">Tech Solutions Inc.</div>
+              <div class="time">2023 - Present</div>
+              <p>Leading app architecture, building scalable mobile products, and guiding development standards.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <h3>Mobile App Developer</h3>
+              <div class="meta">Digital Innovations</div>
+              <div class="time">2021 - 2023</div>
+              <p>Developed multiple production apps for clients using Android, iOS, and cross-platform frameworks.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-card">
+              <h3>Junior Android Developer</h3>
+              <div class="meta">Mobile Innovations Studio</div>
+              <div class="time">2020 - 2021</div>
+              <p>Designed and developed Android applications, focusing on UI polish, Firebase integration, and performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Experience & Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Senior Mobile Developer</h3>
-                        <p class="company">Tech Solutions Inc. | Karachi, Pakistan</p>
-                        <p class="date">2023 - Present</p>
-                        <p class="description">Leading mobile development team, architecting scalable applications, and mentoring junior developers.</p>
-                    </div>
-                </div>
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-inline">
+          <div>
+            <div class="badge">Contact</div>
+            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">Let’s build something great</h2>
+          </div>
+        </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Mobile App Developer</h3>
-                        <p class="company">Digital Innovations | Karachi, Pakistan</p>
-                        <p class="date">2021 - 2023</p>
-                        <p class="description">Developed 15+ mobile applications using Flutter, React Native, and native technologies.</p>
-                    </div>
+        <div class="contact-wrap">
+          <div class="contact-box">
+            <p class="subtitle" style="margin:0 0 18px;">I’m open to freelance work, collaborations, and long-term app projects.</p>
+            <div class="contact-list">
+              <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h4>Location</h4>
+                  <span>Karachi, Pakistan</span>
                 </div>
+              </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Junior Android Developer</h3>
-                        <p class="company">Mobile Innovations Studio | Karachi, Pakistan</p>
-                        <p class="date">2020 - 2021</p>
-                        <p class="description">Built Android applications in Kotlin and Java, focusing on performance and UI/UX.</p>
-                    </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:luckyhassanbhutto@gmail.com">luckyhassanbhutto@gmail.com</a>
                 </div>
+              </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Science in Computer Science</h3>
-                        <p class="company">University of Karachi</p>
-                        <p class="date">2017 - 2021</p>
-                        <p class="description">Specialized in mobile development, software engineering, and data structures.</p>
-                    </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <a href="tel:+923001234567">+92 300 1234567</a>
                 </div>
+              </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's Connect!</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities. Feel free to reach out to me.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div>
-                                <h4>📍 Location</h4>
-                                <p>Karachi, Pakistan</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div>
-                                <h4>📧 Email</h4>
-                                <p><a href="mailto:luckyhassanbhutto@gmail.com">luckyhassanbhutto@gmail.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div>
-                                <h4>📱 Phone</h4>
-                                <p><a href="tel:+923001234567">+92 300 1234567</a></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="social-icons">
-                        <a href="https://github.com/Razhy12" target="_blank" class="social-icon" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+            <div class="socials">
+              <a href="https://github.com/Razhy12" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
+          </div>
+
+          <div class="form-box">
+            <form id="contactForm">
+              <input type="text" id="name" placeholder="Your name" required>
+              <input type="email" id="email" placeholder="Your email" required>
+              <input type="text" id="subject" placeholder="Subject" required>
+              <textarea id="message" placeholder="Write your message" required></textarea>
+              <button class="btn btn-primary" type="submit" style="width:max-content;">Send Message</button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Hassan Raza. All rights reserved.</p>
-            <p>Crafted with ❤️ from Karachi, Pakistan</p>
-        </div>
-    </footer>
+  <footer>
+    <div class="container">
+      © 2024 Hassan Raza — Crafted with passion.
+    </div>
+  </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
 
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const subject = document.getElementById('subject').value;
-                const message = document.getElementById('message').value;
+      const mailto = `mailto:luckyhassanbhutto@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+      window.location.href = mailto;
+      this.reset();
+    });
 
-                // Create mailto link
-                const mailtoLink = `mailto:luckyhassanbhutto@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-                
-                window.location.href = mailtoLink;
-                
-                // Reset form
-                this.reset();
-            });
-        }
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.project-card, .skill-category, .timeline-item').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add fade-in animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        `;
-        document.head.appendChild(style);
-
-        console.log('🚀 Portfolio loaded successfully!');
-    </script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => {
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '82px';
+        navLinks.style.left = '16px';
+        navLinks.style.right = '16px';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.padding = '18px';
+        navLinks.style.background = 'rgba(11,16,32,.96)';
+        navLinks.style.border = '1px solid var(--line)';
+        navLinks.style.borderRadius = '14px';
+      });
+    }
+  </script>
 </body>
 </html>
