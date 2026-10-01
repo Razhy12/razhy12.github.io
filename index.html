@@ -1,37 +1,899 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Novexa | Digital products that move ideas forward</title>
-  <meta name="description" content="Novexa builds premium mobile apps, modern websites and AI automation solutions.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <style>
-    :root{--bg:#08090d;--surface:#11131a;--surface2:#171a23;--text:#f6f7fb;--muted:#9da3b4;--line:#282d3a;--cyan:#6ee7f9;--violet:#9b8cff;--pink:#ff7aa8;--green:#75e0a1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0,#18203b 0,transparent 32%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:10;background:#08090dcc;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.navin{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 1.5rem 'Space Grotesk';letter-spacing:.14em;background:linear-gradient(100deg,var(--cyan),var(--violet));-webkit-background-clip:text;color:transparent}.links{display:flex;gap:28px;color:var(--muted);font-weight:600}.links a:hover{color:var(--cyan)}.hero{min-height:calc(100vh - 76px);display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding:90px 0}.eyebrow{color:var(--cyan);font-size:.78rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700}.hero h1{font:700 clamp(3.3rem,8vw,6.7rem)/.95 'Space Grotesk';letter-spacing:-.07em;margin:18px 0 25px}.gradient{background:linear-gradient(100deg,var(--cyan),var(--violet) 55%,var(--pink));-webkit-background-clip:text;color:transparent}.hero p{font-size:1.15rem;color:var(--muted);max-width:620px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;gap:10px;align-items:center;padding:14px 20px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:.25s}.btn:hover{transform:translateY(-3px)}.primary{background:linear-gradient(100deg,var(--cyan),var(--violet));color:#090b12;border:0}.visual{min-height:430px;padding:28px;border:1px solid #ffffff20;border-radius:28px;background:linear-gradient(145deg,#ffffff12,#ffffff03);box-shadow:0 35px 100px #0008;display:flex;align-items:center;justify-content:center;transform:rotate(2deg)}.visual-card{width:min(100%,360px);padding:26px;border:1px solid #ffffff20;border-radius:22px;background:#0d1019e8;transform:rotate(-2deg)}.orb{width:82px;height:82px;border-radius:24px;background:linear-gradient(135deg,var(--cyan),var(--violet));display:grid;place-items:center;font:700 2rem 'Space Grotesk';color:#090b12}.visual h3{font:600 2rem 'Space Grotesk';margin:28px 0 8px}.visual p{color:var(--muted)}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}.chip{padding:7px 11px;border:1px solid var(--line);border-radius:99px;color:var(--muted);font-size:.82rem}.section{padding:110px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}.section h2{font:600 clamp(2rem,5vw,3.8rem)/1 'Space Grotesk';letter-spacing:-.05em;margin:10px 0 0}.section-head>p{color:var(--muted);max-width:480px;margin:0}.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}.panel{background:linear-gradient(145deg,#ffffff0a,#ffffff03);border:1px solid var(--line);border-radius:22px;padding:30px}.panel p{color:var(--muted);font-size:1.05rem}.skills{display:grid;grid-template-columns:1fr 1fr;gap:12px}.skill{padding:18px;border:1px solid var(--line);border-radius:15px;background:#ffffff05}.skill strong{display:block;margin-bottom:5px}.skill span{color:var(--muted);font-size:.9rem}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--surface);transition:.3s}.project:hover{transform:translateY(-7px);border-color:var(--cyan);box-shadow:0 20px 60px #0007}.project-cover{height:155px;display:grid;place-items:center;font-size:3rem;background:linear-gradient(135deg,#162f42,#28204c)}.project-body{padding:24px}.project h3{font:600 1.45rem 'Space Grotesk';margin:0 0 10px}.project p{color:var(--muted);margin:0 0 18px}.tags{display:flex;flex-wrap:wrap;gap:7px}.tags span{font-size:.75rem;color:var(--cyan);border:1px solid #6ee7f944;padding:5px 8px;border-radius:6px}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.shot{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:18px;border:1px solid var(--line);background:linear-gradient(145deg,#183448,#2b2050)}.shot img{width:100%;height:100%;object-fit:cover;transition:.35s}.shot:hover img{transform:scale(1.05)}.shot figcaption{position:absolute;bottom:0;left:0;right:0;padding:15px 12px;background:linear-gradient(transparent,#08090de8);font-size:.84rem;font-weight:700}.services,.testimonials,.pricing,.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service,.quote,.price,.post{padding:28px;border:1px solid var(--line);border-radius:20px;background:var(--surface)}.service i{font-size:2rem;color:var(--cyan)}.service h3,.post h3{font:600 1.3rem 'Space Grotesk'}.service p,.quote p,.post p{color:var(--muted)}.quote{position:relative}.quote:before{content:'“';font:700 5rem 'Space Grotesk';line-height:.6;color:var(--violet)}.quote cite{color:var(--cyan);font-style:normal;font-size:.9rem}.price{position:relative}.price.featured{border-color:var(--cyan);box-shadow:0 0 45px #6ee7f922}.ribbon{position:absolute;right:18px;top:18px;color:var(--cyan);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}.price h3{font:600 1.4rem 'Space Grotesk'}.amount{font:700 2.3rem 'Space Grotesk';margin:18px 0}.price ul{padding:0;list-style:none;color:var(--muted);line-height:2}.price li:before{content:'✓';color:var(--green);margin-right:9px}.post small{color:var(--cyan);text-transform:uppercase;letter-spacing:.12em}.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}.contact-list{display:grid;gap:16px;margin-top:25px}.contact-list a{color:var(--muted)}.contact-list a:hover{color:var(--cyan)}.socials{display:flex;gap:10px;margin-top:25px}.socials a{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;color:var(--cyan)}.socials a:hover{background:var(--cyan);color:var(--bg)}footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);text-align:center;font-size:.9rem}@media(max-width:850px){.hero,.about,.contact{grid-template-columns:1fr}.projects,.services,.testimonials,.pricing,.posts{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:repeat(2,1fr)}.visual{min-height:340px}.links{display:none}}@media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.hero{padding:65px 0}.projects,.services,.testimonials,.pricing,.posts{grid-template-columns:1fr}.section{padding:75px 0}.hero h1{font-size:3.4rem}.gallery{gap:8px}.shot{border-radius:12px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan Raza - Premium Digital Developer | NOVEXA</title>
+    <meta name="description" content="Hassan Raza | Premium App & Web Developer | Android Kotlin | AI Automation | Portfolio & Services">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #00d9ff;
+            --secondary: #0f3460;
+            --accent: #e94560;
+            --dark: #0a0e27;
+            --darker: #05080f;
+            --text: #e0e0e0;
+            --muted: #a0a0a0;
+            --success: #00d97e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #05080f 0%, #0a0e27 50%, #0f1a35 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 3D Background Effects */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 217, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(233, 69, 96, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) translateZ(0); }
+            50% { transform: translateY(-30px) translateZ(20px); }
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 20px rgba(0, 217, 255, 0.3), 0 0 40px rgba(0, 217, 255, 0.1); }
+            50% { text-shadow: 0 0 40px rgba(0, 217, 255, 0.6), 0 0 80px rgba(0, 217, 255, 0.2); }
+        }
+
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 8, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+            padding: 18px 0;
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            animation: glow 2s ease-in-out infinite;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 40px 80px;
+            position: relative;
+        }
+
+        .hero-wrapper {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            perspective: 1200px;
+        }
+
+        .hero-content {
+            animation: slideInUp 1s ease-out;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 50px;
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 .gradient {
+            background: linear-gradient(135deg, var(--primary), #00f5ff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--muted);
+            margin-bottom: 40px;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #00f5ff);
+            color: #05080f;
+            box-shadow: 0 10px 40px rgba(0, 217, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.5);
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 217, 255, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .stats {
+            display: flex;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .stat-label {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        /* 3D Card */
+        .hero-3d {
+            perspective: 1200px;
+            animation: slideInUp 1.2s ease-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-3d {
+            width: 100%;
+            max-width: 350px;
+            height: 450px;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(233, 69, 96, 0.05));
+            border: 2px solid rgba(0, 217, 255, 0.3);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 50px 100px rgba(0, 217, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .card-3d::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.2), transparent);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .card-3d::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.15), transparent);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .card-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .card-content p {
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 40px;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 60px;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        .section-title span {
+            background: linear-gradient(135deg, var(--primary), #00f5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.08), rgba(233, 69, 96, 0.08));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary);
+            box-shadow: 0 30px 80px rgba(0, 217, 255, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.08), rgba(233, 69, 96, 0.08));
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 30px 80px rgba(0, 217, 255, 0.15);
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .project-card p {
+            color: var(--muted);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            padding: 6px 12px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-box {
+            background: rgba(0, 217, 255, 0.08);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-box:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 217, 255, 0.1);
+        }
+
+        .skill-box h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-item {
+            padding: 8px 14px;
+            background: rgba(0, 217, 255, 0.1);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .contact-info p {
+            color: var(--muted);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 5px;
+        }
+
+        .contact-detail h4 {
+            color: var(--text);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .contact-detail a,
+        .contact-detail p {
+            color: var(--muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-detail a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: var(--darker);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+
+        footer {
+            border-top: 1px solid rgba(0, 217, 255, 0.1);
+            padding: 40px;
+            text-align: center;
+            color: var(--muted);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .whatsapp-float a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float a:hover {
+            transform: scale(1.15);
+            box-shadow: 0 15px 50px rgba(37, 211, 102, 0.6);
+        }
+
+        @media (max-width: 850px) {
+            .hero-wrapper,
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+            }
+
+            .section {
+                padding: 80px 20px;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <nav class="nav"><div class="wrap navin"><a class="brand" href="#home">NOVEXA</a><div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#pricing">Pricing</a><a href="#blog">Blog</a><a href="#contact">Contact</a></div></div></nav>
-  <main id="home">
-    <section class="hero wrap"><div><div class="eyebrow">Independent digital studio · Pakistan</div><h1>Build what’s <span class="gradient">next.</span></h1><p>Novexa creates purposeful mobile apps, refined websites, and intelligent automation for people and businesses ready to move forward.</p><div class="actions"><a class="btn primary" href="#projects">Explore work <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="btn" href="https://wa.me/923243407113" target="_blank">Start a conversation</a></div><div class="chips"><span class="chip">App Development</span><span class="chip">Web Development</span><span class="chip">AI Automation</span></div></div><div class="visual"><div class="visual-card"><div class="orb">N</div><h3>Ideas → impact</h3><p>Design, engineering and automation in one focused partner.</p><div class="chips"><span class="chip">Kotlin</span><span class="chip">Web</span><span class="chip">AI</span><span class="chip">Firebase</span></div></div></div></section>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">NOVEXA</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <section id="about" class="section wrap"><div class="section-head"><div><div class="eyebrow">The studio</div><h2>Small team energy.<br><span class="gradient">Big product thinking.</span></h2></div><p>Novexa is Hassan Raza’s digital studio for building useful, beautiful and scalable technology.</p></div><div class="about"><div class="panel"><p>We turn rough ideas into polished digital experiences. From an Android app for installment businesses to a fast brand website or an AI-powered workflow, every build starts with clarity and ends with measurable value.</p><p>Our approach is simple: understand the problem, design the cleanest solution, and ship work we are proud to put our name on.</p></div><div class="skills"><div class="skill"><strong>Mobile</strong><span>Kotlin · Android · Firebase · Jetpack</span></div><div class="skill"><strong>Web</strong><span>HTML · CSS · JavaScript · Responsive UI</span></div><div class="skill"><strong>Automation</strong><span>AI tools · APIs · smart workflows</span></div><div class="skill"><strong>Delivery</strong><span>Clean code · UX · iteration · support</span></div></div></div></section>
+    <section id="home" class="hero">
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <div class="badge">
+                    <i class="fas fa-code"></i>
+                    Premium Digital Developer
+                </div>
+                <h1>Build <span class="gradient">Digital Excellence</span> Today</h1>
+                <p>I craft premium mobile apps with Kotlin, modern web solutions, and intelligent AI automation. Every project is built with precision, quality, and your business goals in mind.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-arrow-right"></i> View My Work
+                    </a>
+                    <a href="https://wa.me/923243407113" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Direct
+                    </a>
+                </div>
 
-    <section id="services" class="section wrap"><div class="section-head"><div><div class="eyebrow">What we do</div><h2>Services designed<br>for <span class="gradient">momentum.</span></h2></div><p>Choose a focused build or combine services into a complete digital product.</p></div><div class="services"><article class="service"><i class="fa-solid fa-mobile-screen-button"></i><h3>App Development</h3><p>Modern Android applications with thoughtful UX, reliable logic and production-ready foundations.</p></article><article class="service"><i class="fa-solid fa-globe"></i><h3>Web Development</h3><p>Premium landing pages, business websites and responsive interfaces that make your brand memorable.</p></article><article class="service"><i class="fa-solid fa-wand-magic-sparkles"></i><h3>AI Automation</h3><p>Automate repetitive work with practical AI workflows, integrations and custom tools.</p></article></div></section>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Apps Launched</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Projects Done</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
 
-    <section id="projects" class="section wrap"><div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Built for the<br><span class="gradient">real world.</span></h2></div><p>Explore a closer look at the products and interfaces behind Novexa.</p></div><div class="projects"><article class="project"><div class="project-cover">🛒</div><div class="project-body"><h3>Babu Electronics</h3><p>A bilingual Android business app for customer ledgers, Qist calculations, recovery and electronics stock.</p><div class="tags"><span>Kotlin</span><span>Firebase</span><span>Business UI</span></div><a class="project-link" href="https://github.com/Razhy12/qist-app" target="_blank">View repository →</a></div></article><article class="project"><div class="project-cover">☪</div><div class="project-body"><h3>Islamic Reminder</h3><p>A focused reminder experience helping users build consistent daily spiritual habits.</p><div class="tags"><span>Android</span><span>Kotlin</span><span>Notifications</span></div><a class="project-link" href="https://github.com/Razhy12/MyFirstAndroidApp" target="_blank">View repository →</a></div></article><article class="project"><div class="project-cover">✦</div><div class="project-body"><h3>Novexa Website</h3><p>A bold digital home for the studio, combining premium visual design with clear conversion paths.</p><div class="tags"><span>HTML</span><span>CSS</span><span>Responsive</span></div><a class="project-link" href="https://github.com/Razhy12/razhy12.github.io" target="_blank">View repository →</a></div></article></div><div class="gallery" aria-label="Babu Electronics screenshots"><figure class="shot"><img src="assets/projects/babu-electronics/dashboard.png" alt="Babu Electronics dashboard" onerror="this.style.display='none'"><figcaption>Dashboard</figcaption></figure><figure class="shot"><img src="assets/projects/babu-electronics/installment-khata.png" alt="Installment Khata customer ledger" onerror="this.style.display='none'"><figcaption>Installment Khata</figcaption></figure><figure class="shot"><img src="assets/projects/babu-electronics/qist-calculator.png" alt="Qist calculator" onerror="this.style.display='none'"><figcaption>Qist Calculator</figcaption></figure><figure class="shot"><img src="assets/projects/babu-electronics/navigation-menu.png" alt="Babu Electronics navigation menu" onerror="this.style.display='none'"><figcaption>Navigation & settings</figcaption></figure></div></section>
+            <div class="hero-3d">
+                <div class="card-3d">
+                    <div class="card-content">
+                        <div class="card-icon">💻</div>
+                        <h3>Premium Solutions</h3>
+                        <p>Crafted with cutting-edge technology, modern design patterns, and production-ready code for maximum impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="section wrap"><div class="section-head"><div><div class="eyebrow">Kind words</div><h2>Built with care,<br><span class="gradient">not empty promises.</span></h2></div><p>Real client feedback will be added here as Novexa projects go live.</p></div><div class="testimonials"><article class="quote"><p>“Novexa made our workflow feel simple and clear. The product finally matches how our business works.”</p><cite>— Babu Electronics · Product feedback</cite></article><article class="quote"><p>“The attention to detail in the interface made the app easy for our team to understand.”</p><cite>— Early product collaborator</cite></article><article class="quote"><p>“A focused, thoughtful approach from idea to working experience.”</p><cite>— Novexa project partner</cite></article></div></section>
+    <section id="services" class="section">
+        <h2 class="section-title">Services I <span>Provide</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>App Development</h3>
+                <p>Stunning Android applications with Kotlin, MVVM architecture, Firebase integration, and seamless user experiences.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <h3>Web Development</h3>
+                <p>Responsive, fast, and beautiful websites with modern HTML/CSS, JavaScript, and conversion-optimized design.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI Automation</h3>
+                <p>Intelligent workflow automation, API integrations, and AI-powered solutions that streamline business processes.</p>
+            </div>
+        </div>
+    </section>
 
-    <section id="pricing" class="section wrap"><div class="section-head"><div><div class="eyebrow">Simple engagement</div><h2>Pick your<br><span class="gradient">starting point.</span></h2></div><p>Every project is scoped around your goals. Contact Novexa for an exact quote.</p></div><div class="pricing"><article class="price"><h3>Launch</h3><div class="amount">Custom quote</div><ul><li>Landing page or small website</li><li>Responsive premium design</li><li>Basic deployment support</li></ul><a class="btn" href="#contact">Discuss a launch</a></article><article class="price featured"><div class="ribbon">Popular</div><h3>Build</h3><div class="amount">Custom quote</div><ul><li>Android app or business platform</li><li>UI/UX and core features</li><li>Testing and handover</li></ul><a class="btn primary" href="#contact">Discuss a build</a></article><article class="price"><h3>Automate</h3><div class="amount">Custom quote</div><ul><li>Workflow and AI audit</li><li>Tool/API integration</li><li>Automation setup and guidance</li></ul><a class="btn" href="#contact">Discuss automation</a></article></div></section>
+    <section id="projects" class="section">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                <h3>Babu Electronics</h3>
+                <p>Advanced business app for installment management, customer ledgers, Qist calculations, and inventory tracking with real-time analytics.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Kotlin</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Business Logic</span>
+                </div>
+            </div>
 
-    <section id="blog" class="section wrap"><div class="section-head"><div><div class="eyebrow">Notes from Novexa</div><h2>Ideas, builds<br>& <span class="gradient">lessons learned.</span></h2></div><p>Short updates about product thinking, development and automation.</p></div><div class="posts"><article class="post"><small>Android · 01</small><h3>Designing a useful business dashboard</h3><p>What makes financial information easy to scan, understand and act on.</p><a class="project-link" href="mailto:hassandrz200@gmail.com?subject=Blog%20update%20request">Read update →</a></article><article class="post"><small>Automation · 02</small><h3>Where AI automation creates real value</h3><p>A practical look at choosing workflows that are worth automating.</p><a class="project-link" href="mailto:hassandrz200@gmail.com?subject=Blog%20update%20request">Read update →</a></article><article class="post"><small>Product · 03</small><h3>From idea to an experience people trust</h3><p>The small details that turn a functional product into a memorable one.</p><a class="project-link" href="mailto:hassandrz200@gmail.com?subject=Blog%20update%20request">Read update →</a></article></div></section>
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-bell"></i></div>
+                <h3>Islamic Reminder</h3>
+                <p>Modern spiritual companion app with smart notifications, daily tracking, and clean Islamic-focused design for mindful practice.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Kotlin</span>
+                    <span class="tech-tag">MVVM</span>
+                    <span class="tech-tag">Notifications</span>
+                </div>
+                <a href="https://github.com/Razhy12/MyFirstAndroidApp" target="_blank" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">
+                    <i class="fas fa-external-link-alt"></i> View Repository
+                </a>
+            </div>
 
-    <section id="contact" class="section wrap"><div class="contact"><div><div class="eyebrow">Let’s work together</div><h2>Have an idea?<br><span class="gradient">Let’s make it real.</span></h2><p style="color:var(--muted);max-width:470px">Tell us what you are building, where you are stuck, or what you want to automate. We will reply with a clear next step.</p><div class="contact-list"><a href="mailto:hassandrz200@gmail.com"><i class="fa-solid fa-envelope"></i> hassandrz200@gmail.com</a><a href="https://wa.me/923243407113" target="_blank"><i class="fa-brands fa-whatsapp"></i> +92 324 340 7113</a></div><div class="socials"><a href="https://www.linkedin.com/in/mr-sonu-236172251/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="https://x.com/HassanR74591760" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a><a href="https://www.facebook.com/profile.php?id=61594694612405" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/novexacodings" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://github.com/Razhy12" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></div></div><div class="panel"><h3 style="font:600 1.6rem 'Space Grotesk';margin-top:0">Start a conversation</h3><p>For project details, email or WhatsApp is the fastest way to reach Novexa.</p><a class="btn primary" href="mailto:hassandrz200@gmail.com">Email Novexa <i class="fa-solid fa-arrow-right"></i></a></div></div></section>
-  </main>
-  <footer>© 2026 NOVEXA · App Development · Web Development · AI Automation</footer>
+            <div class="project-card">
+                <div class="project-icon"><i class="fas fa-code"></i></div>
+                <h3>Novexa Portfolio</h3>
+                <p>Premium portfolio website with 3D effects, smooth animations, and optimized performance showcasing work and expertise.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">3D CSS</span>
+                    <span class="tech-tag">Responsive</span>
+                </div>
+                <a href="https://github.com/Razhy12/razhy12.github.io" target="_blank" class="btn btn-secondary" style="margin-top: 15px; width: 100%;">
+                    <i class="fas fa-external-link-alt"></i> View Repository
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title">Technical <span>Expertise</span></h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <h4>📱 Mobile Development</h4>
+                <div class="skill-list">
+                    <span class="skill-item">Kotlin</span>
+                    <span class="skill-item">Android</span>
+                    <span class="skill-item">MVVM</span>
+                    <span class="skill-item">Firebase</span>
+                    <span class="skill-item">Jetpack</span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h4>🌐 Web Development</h4>
+                <div class="skill-list">
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">Responsive</span>
+                    <span class="skill-item">3D CSS</span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h4>🤖 AI & Automation</h4>
+                <div class="skill-list">
+                    <span class="skill-item">AI Tools</span>
+                    <span class="skill-item">API Integration</span>
+                    <span class="skill-item">Workflow Automation</span>
+                    <span class="skill-item">Cloud Solutions</span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <h4>☁️ Backend & Tools</h4>
+                <div class="skill-list">
+                    <span class="skill-item">Firebase</span>
+                    <span class="skill-item">REST APIs</span>
+                    <span class="skill-item">Git/GitHub</span>
+                    <span class="skill-item">Version Control</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+        <div class="contact-section">
+            <div class="contact-info">
+                <h3>Ready to Build Something Exceptional?</h3>
+                <p>Whether you have a mobile app idea, need a premium website, or want to automate your workflows with AI, I'm here to help you achieve your digital goals. Let's create something extraordinary together.</p>
+                
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-detail">
+                        <h4>Email</h4>
+                        <a href="mailto:hassandrz200@gmail.com">hassandrz200@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-detail">
+                        <h4>WhatsApp Direct</h4>
+                        <a href="https://wa.me/923243407113" target="_blank">+92 324 340 7113</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                    <div class="contact-detail">
+                        <h4>Connect on Social</h4>
+                        <p>Follow for updates and insights</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mr-sonu-236172251/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/HassanR74591760" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/novexacodings" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Razhy12" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div style="background: rgba(0, 217, 255, 0.08); border: 1px solid rgba(0, 217, 255, 0.2); border-radius: 20px; padding: 40px;">
+                <h3 style="margin-bottom: 25px; font-family: 'Space Grotesk';">Quick Connect</h3>
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <a href="https://wa.me/923243407113" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
+                        <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                    </a>
+                    <a href="mailto:hassandrz200@gmail.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Hassan Raza | NOVEXA | Premium App & Web Development</p>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/923243407113" target="_blank" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 </body>
 </html>
