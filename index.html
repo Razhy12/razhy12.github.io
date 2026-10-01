@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hassan Raza | Mobile App Developer</title>
-  <meta name="description" content="Portfolio of Hassan Raza, Mobile App Developer specializing in Android, iOS, Flutter, and UI/UX." />
+  <title>Hassan Raza | App Developer, Web Developer & AI Automation</title>
+  <meta name="description" content="Hassan Raza - App Developer, Web Developer & AI Automation Specialist. Building mobile apps, web solutions, and automation bots." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,7 +25,9 @@
       --radius:22px;
     }
 
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0; font-family:'Inter',sans-serif; background:linear-gradient(180deg,#0b1020 0%,#0d1325 100%); color:var(--text); line-height:1.7;}
+    *{box-sizing:border-box} 
+    html{scroll-behavior:smooth} 
+    body{margin:0; font-family:'Inter',sans-serif; background:linear-gradient(180deg,#0b1020 0%,#0d1325 100%); color:var(--text); line-height:1.7;}
     a{text-decoration:none; color:inherit}
     img{max-width:100%; display:block}
     .container{width:min(1180px, calc(100% - 32px)); margin:0 auto}
@@ -43,7 +45,7 @@
     .nav-wrap{position:sticky; top:0; z-index:50; backdrop-filter:blur(18px); background:rgba(11,16,32,.72); border-bottom:1px solid var(--line)}
     .nav{display:flex; align-items:center; justify-content:space-between; min-height:82px}
     .brand{display:flex; align-items:center; gap:12px; font-size:1.1rem; font-weight:800; letter-spacing:-.04em}
-    .brand-mark{width:42px; height:42px; display:grid; place-items:center; border-radius:12px; background:linear-gradient(135deg,var(--primary),var(--primary-2)); box-shadow:0 12px 28px rgba(124,108,255,.45)}
+    .brand-mark{width:42px; height:42px; display:grid; place-items:center; border-radius:12px; background:linear-gradient(135deg,var(--primary),var(--primary-2)); box-shadow:0 12px 28px rgba(124,108,255,.45); color:#fff; font-size:1.2rem}
     .nav-links{display:flex; align-items:center; gap:26px; color:var(--muted); font-size:.95rem}
     .nav-links a:hover{color:var(--text)}
     .menu-btn{display:none}
@@ -53,7 +55,7 @@
     .hero::before{width:420px; height:420px; background:rgba(124,108,255,.22); right:-120px; top:40px}
     .hero::after{width:380px; height:380px; background:rgba(79,209,197,.18); left:-120px; bottom:-60px}
     .hero-grid{display:grid; grid-template-columns:1.3fr .9fr; gap:40px; align-items:center; position:relative; z-index:1}
-    .hero-copy .title span{background:linear-gradient(135deg,#fff,#b8a8ff); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .hero-copy .title span{background:linear-gradient(135deg,#4fd1c5,#7c6cff); -webkit-background-clip:text; background-clip:text; color:transparent}
     .hero-copy p{color:var(--muted); max-width:620px; font-size:1.14rem}
     .hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-top:28px}
     .hero-meta{display:flex; flex-wrap:wrap; gap:18px; margin-top:28px; color:var(--muted)}
@@ -91,7 +93,7 @@
 
     .stack-grid{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:18px}
     .stack-card{background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:18px; padding:22px}
-    .stack-card h3{margin:0 0 16px; font-size:1.1rem}
+    .stack-card h3{margin:0 0 16px; font-size:1.1rem; color:var(--primary-2)}
     .tag-list{display:flex; flex-wrap:wrap; gap:10px}
     .tag{padding:8px 12px; border-radius:999px; background:rgba(79,209,197,.08); border:1px solid rgba(79,209,197,.18); color:#c6fff8; font-size:.8rem; font-weight:600}
 
@@ -107,12 +109,13 @@
     .project-card:hover{transform:translateY(-6px); border-color:rgba(124,108,255,.45)}
     .project-thumb{height:220px; display:grid; place-items:center; font-size:5rem; background:linear-gradient(135deg, rgba(124,108,255,.16), rgba(79,209,197,.08)); border-bottom:1px solid var(--line)}
     .project-body{padding:22px}
-    .project-body h3{margin:0 0 10px; font-size:1.18rem}
-    .project-body p{margin:0 0 16px; color:var(--muted)}
+    .project-body h3{margin:0 0 10px; font-size:1.18rem; color:var(--primary-2)}
+    .project-body p{margin:0 0 16px; color:var(--muted); font-size:.95rem}
     .project-tags{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px}
     .project-tags span{padding:7px 10px; border-radius:999px; background:rgba(124,108,255,.08); color:#d9d2ff; border:1px solid rgba(124,108,255,.18); font-size:.74rem; font-weight:600}
     .project-links{display:flex; gap:14px}
-    .project-links a{color:var(--primary-2); font-weight:700; font-size:.9rem}
+    .project-links a{color:var(--primary-2); font-weight:700; font-size:.9rem; transition:.2s ease}
+    .project-links a:hover{color:var(--primary)}
 
     .timeline{display:grid; gap:22px; margin-top:30px}
     .timeline-item{position:relative; padding-left:34px; margin-left:12px; border-left:2px solid rgba(124,108,255,.42)}
@@ -131,7 +134,7 @@
     .contact-item h4{margin:0 0 4px; font-size:1rem}
     .contact-item a, .contact-item span{color:var(--muted); font-size:.96rem}
     .socials{display:flex; gap:12px; margin-top:20px; flex-wrap:wrap}
-    .socials a{width:46px; height:46px; display:grid; place-items:center; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--text)}
+    .socials a{width:46px; height:46px; display:grid; place-items:center; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.02); color:var(--text); transition:.2s ease}
     .socials a:hover{border-color:rgba(124,108,255,.35); color:var(--primary-2)}
 
     form{display:grid; gap:16px}
@@ -156,6 +159,7 @@
       .profile-visual{height:360px}
       .section{padding:90px 0}
       .title{font-size:2.5rem}
+      .stack-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -163,14 +167,13 @@
   <div class="nav-wrap">
     <div class="container nav">
       <a href="#home" class="brand">
-        <div class="brand-mark"><i class="fa-solid fa-code"></i></div>
+        <div class="brand-mark">💻</div>
         <span>Hassan Raza</span>
       </a>
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
       <button class="menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
@@ -181,28 +184,29 @@
     <div class="container hero-grid">
       <div class="hero-copy">
         <div class="badge"><i class="fa-solid fa-rocket"></i> Available for work</div>
-        <h1 class="title">Hi, I’m Hassan Raza <span>Mobile App Developer</span></h1>
-        <p>I build clean, high-performing mobile apps for Android and iOS, blending user experience, performance, and business-focused design into every product.</p>
+        <h1 class="title">App, Web & <span>AI Automation</span></h1>
+        <p>I build mobile apps for Android & iOS, create modern web solutions, and develop AI automation bots. Full-stack developer from Karachi, Pakistan.</p>
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-light">Hire Me</a>
+          <a href="#projects" class="btn btn-primary">View My Projects</a>
+          <a href="#contact" class="btn btn-light">Get In Touch</a>
         </div>
         <div class="hero-meta">
           <div class="meta-box"><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</div>
-          <div class="meta-box"><i class="fa-solid fa-envelope"></i> luckyhassanbhutto@gmail.com</div>
+          <div class="meta-box"><i class="fa-solid fa-envelope"></i> hassandrz200@gmail.com</div>
+          <div class="meta-box"><i class="fa-solid fa-phone"></i> 03243407113</div>
         </div>
       </div>
 
       <div class="profile-card">
         <div class="profile-visual">
-          <div class="avatar">📱</div>
+          <div class="avatar">🚀</div>
           <div class="mini-card one">
             <div class="label">Projects</div>
-            <div class="value">50+</div>
+            <div class="value">20+</div>
           </div>
           <div class="mini-card two">
-            <div class="label">Playback</div>
-            <div class="value">4.8★</div>
+            <div class="label">Skills</div>
+            <div class="value">15+</div>
           </div>
         </div>
       </div>
@@ -214,75 +218,75 @@
       <div class="container">
         <div class="header-block">
           <div class="badge">About</div>
-          <h2 class="title" style="font-size:clamp(2rem,3.6vw,3.2rem);">A developer focused on product quality.</h2>
+          <h2 class="title" style="font-size:clamp(2rem,3.6vw,3.2rem);">Building digital solutions with code & AI</h2>
         </div>
 
         <div class="about-grid">
           <div class="glass about-copy">
-            <p>Hello! I’m <strong>Hassan Raza</strong>, a mobile app developer passionate about building modern applications that are simple, beautiful, and responsive.</p>
-            <p>I enjoy turning ideas into reliable mobile experiences for Android, iOS, and cross-platform products. My work focuses on performance, clean architecture, and strong user interfaces.</p>
+            <p>Hey! I'm <strong>Hassan Raza</strong>, a full-stack developer specializing in mobile apps, web development, and AI automation solutions.</p>
+            <p>I transform ideas into production-ready applications using modern technologies. My focus is on creating scalable, user-friendly solutions that solve real problems.</p>
             <div class="feature-list">
               <div class="feature-item">
                 <i class="fa-solid fa-check"></i>
-                <p><strong>Native apps:</strong> Kotlin, Java, Swift, and modern mobile architecture.</p>
+                <p><strong>Mobile Development:</strong> Native Android (Kotlin), iOS, Flutter & React Native</p>
               </div>
               <div class="feature-item">
                 <i class="fa-solid fa-check"></i>
-                <p><strong>Cross-platform:</strong> Flutter and React Native for fast product delivery.</p>
+                <p><strong>Web Development:</strong> HTML, CSS, JavaScript, and modern frameworks</p>
               </div>
               <div class="feature-item">
                 <i class="fa-solid fa-check"></i>
-                <p><strong>Modern workflow:</strong> Firebase, APIs, UI systems, and clean code practices.</p>
+                <p><strong>AI Automation:</strong> Build smart bots and automation workflows</p>
               </div>
             </div>
           </div>
 
           <div class="stack-grid">
             <div class="stack-card">
-              <h3>Android</h3>
+              <h3>📱 Mobile</h3>
               <div class="tag-list">
                 <span class="tag">Kotlin</span>
                 <span class="tag">Java</span>
-                <span class="tag">Jetpack</span>
-                <span class="tag">MVVM</span>
-                <span class="tag">Firebase</span>
-              </div>
-            </div>
-            <div class="stack-card">
-              <h3>iOS</h3>
-              <div class="tag-list">
                 <span class="tag">Swift</span>
-                <span class="tag">SwiftUI</span>
-                <span class="tag">UIKit</span>
-                <span class="tag">CoreData</span>
-              </div>
-            </div>
-            <div class="stack-card">
-              <h3>Web / Cross</h3>
-              <div class="tag-list">
                 <span class="tag">Flutter</span>
-                <span class="tag">Dart</span>
                 <span class="tag">React Native</span>
-                <span class="tag">JavaScript</span>
               </div>
             </div>
             <div class="stack-card">
-              <h3>Backend</h3>
+              <h3>🌐 Web</h3>
               <div class="tag-list">
-                <span class="tag">Node.js</span>
-                <span class="tag">REST API</span>
-                <span class="tag">MongoDB</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">UI/UX</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <h3>🤖 AI & Automation</h3>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">APIs</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Bots</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <h3>⚙️ Tools & Services</h3>
+              <div class="tag-list">
                 <span class="tag">Git</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">APIs</span>
               </div>
             </div>
           </div>
         </div>
 
         <div class="stats">
-          <div class="stat"><strong>50+</strong><span>Projects</span></div>
-          <div class="stat"><strong>100K+</strong><span>Downloads</span></div>
-          <div class="stat"><strong>4.8★</strong><span>Ratings</span></div>
-          <div class="stat"><strong>3+ yrs</strong><span>Experience</span></div>
+          <div class="stat"><strong>20+</strong><span>Projects Completed</span></div>
+          <div class="stat"><strong>15+</strong><span>Technologies</span></div>
+          <div class="stat"><strong>100%</strong><span>Client Satisfaction</span></div>
+          <div class="stat"><strong>3+</strong><span>Years Experience</span></div>
         </div>
       </div>
     </section>
@@ -292,26 +296,26 @@
         <div class="section-inline">
           <div>
             <div class="badge">Services</div>
-            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">What I do best</h2>
+            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">What I Offer</h2>
           </div>
-          <p class="subtitle">I help brands and startups turn ideas into polished mobile experiences with strong design and technical execution.</p>
+          <p class="subtitle">Full range of development services from mobile apps to AI automation bots</p>
         </div>
 
         <div class="service-grid">
           <div class="service-card">
             <div class="icon-wrap"><i class="fa-solid fa-mobile-screen-button"></i></div>
-            <h3>Mobile App Development</h3>
-            <p>From concept to launch, I build Android and iOS applications with a focus on usability and performance.</p>
+            <h3>Mobile Apps</h3>
+            <p>Native Android & iOS apps, Flutter cross-platform development, and React Native solutions.</p>
           </div>
           <div class="service-card">
-            <div class="icon-wrap"><i class="fa-solid fa-layer-group"></i></div>
-            <h3>UI/UX Design</h3>
-            <p>Modern, user-friendly interfaces designed for retention, clarity, and stronger engagement.</p>
+            <div class="icon-wrap"><i class="fa-solid fa-globe"></i></div>
+            <h3>Web Development</h3>
+            <p>Modern, responsive websites and web applications with clean design and smooth user experience.</p>
           </div>
           <div class="service-card">
-            <div class="icon-wrap"><i class="fa-solid fa-code"></i></div>
-            <h3>App Optimization</h3>
-            <p>Improve speed, stability, and maintainability using best practices and scalable architecture.</p>
+            <div class="icon-wrap"><i class="fa-solid fa-robot"></i></div>
+            <h3>AI Automation Bots</h3>
+            <p>Smart automation bots and workflows to streamline your business processes and save time.</p>
           </div>
         </div>
       </div>
@@ -322,21 +326,21 @@
         <div class="section-inline">
           <div>
             <div class="badge">Projects</div>
-            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">Selected work</h2>
+            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">My Recent Work</h2>
           </div>
-          <p class="subtitle">A few examples of product-focused apps and digital experiences I’ve built.</p>
+          <p class="subtitle">A selection of projects I've built and shipped</p>
         </div>
 
         <div class="project-grid">
           <article class="project-card">
-            <div class="project-thumb">📋</div>
+            <div class="project-thumb">📱</div>
             <div class="project-body">
               <h3>MyFirstAndroidApp</h3>
-              <p>Islamic reminder app with a clean user interface and practical daily features for the user.</p>
+              <p>Modern Android Islamic reminder app with beautiful UI and practical features.</p>
               <div class="project-tags">
                 <span>Kotlin</span>
                 <span>Android</span>
-                <span>UI/UX</span>
+                <span>Material Design</span>
               </div>
               <div class="project-links">
                 <a href="https://github.com/Razhy12/MyFirstAndroidApp" target="_blank">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -348,7 +352,7 @@
             <div class="project-thumb">🎨</div>
             <div class="project-body">
               <h3>Code With Hassan Portfolio</h3>
-              <p>Professional portfolio website built for showcasing projects, services, and personal branding.</p>
+              <p>Professional portfolio website showcasing services and completed projects.</p>
               <div class="project-tags">
                 <span>HTML</span>
                 <span>CSS</span>
@@ -361,60 +365,20 @@
           </article>
 
           <article class="project-card">
-            <div class="project-thumb">💪</div>
+            <div class="project-thumb">💼</div>
             <div class="project-body">
-              <h3>FitTracker Pro</h3>
-              <p>Fitness app concept built for tracking workouts, goals, and user progress with a premium feel.</p>
+              <h3>Portfolio Website</h3>
+              <p>Personal portfolio website with modern design and full responsiveness.</p>
               <div class="project-tags">
-                <span>Flutter</span>
-                <span>Firebase</span>
-                <span>Dart</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Responsive</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/Razhy12" target="_blank">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/Razhy12/razhy12.github.io" target="_blank">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
               </div>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section-inline">
-          <div>
-            <div class="badge">Experience</div>
-            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">Career journey</h2>
-          </div>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-card">
-              <h3>Senior Mobile App Developer</h3>
-              <div class="meta">Tech Solutions Inc.</div>
-              <div class="time">2023 - Present</div>
-              <p>Leading app architecture, building scalable mobile products, and guiding development standards.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-card">
-              <h3>Mobile App Developer</h3>
-              <div class="meta">Digital Innovations</div>
-              <div class="time">2021 - 2023</div>
-              <p>Developed multiple production apps for clients using Android, iOS, and cross-platform frameworks.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-card">
-              <h3>Junior Android Developer</h3>
-              <div class="meta">Mobile Innovations Studio</div>
-              <div class="time">2020 - 2021</div>
-              <p>Designed and developed Android applications, focusing on UI polish, Firebase integration, and performance.</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -424,13 +388,13 @@
         <div class="section-inline">
           <div>
             <div class="badge">Contact</div>
-            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">Let’s build something great</h2>
+            <h2 class="title" style="font-size:clamp(2rem,3vw,3rem);">Let's Work Together</h2>
           </div>
         </div>
 
         <div class="contact-wrap">
           <div class="contact-box">
-            <p class="subtitle" style="margin:0 0 18px;">I’m open to freelance work, collaborations, and long-term app projects.</p>
+            <p class="subtitle" style="margin:0 0 18px;">Have a project in mind? Interested in collaboration? Get in touch!</p>
             <div class="contact-list">
               <div class="contact-item">
                 <i class="fa-solid fa-location-dot"></i>
@@ -444,7 +408,7 @@
                 <i class="fa-solid fa-envelope"></i>
                 <div>
                   <h4>Email</h4>
-                  <a href="mailto:luckyhassanbhutto@gmail.com">luckyhassanbhutto@gmail.com</a>
+                  <a href="mailto:hassandrz200@gmail.com">hassandrz200@gmail.com</a>
                 </div>
               </div>
 
@@ -452,16 +416,24 @@
                 <i class="fa-solid fa-phone"></i>
                 <div>
                   <h4>Phone</h4>
-                  <a href="tel:+923001234567">+92 300 1234567</a>
+                  <a href="tel:+923243407113">0324-3407113</a>
                 </div>
               </div>
             </div>
 
             <div class="socials">
-              <a href="https://github.com/Razhy12" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-              <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://github.com/Razhy12" target="_blank" aria-label="GitHub" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" aria-label="Twitter" title="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" aria-label="Instagram" title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
             </div>
           </div>
 
@@ -470,7 +442,7 @@
               <input type="text" id="name" placeholder="Your name" required>
               <input type="email" id="email" placeholder="Your email" required>
               <input type="text" id="subject" placeholder="Subject" required>
-              <textarea id="message" placeholder="Write your message" required></textarea>
+              <textarea id="message" placeholder="Write your message..." required></textarea>
               <button class="btn btn-primary" type="submit" style="width:max-content;">Send Message</button>
             </form>
           </div>
@@ -481,7 +453,7 @@
 
   <footer>
     <div class="container">
-      © 2024 Hassan Raza — Crafted with passion.
+      © 2024 Hassan Raza | App Developer, Web Developer & AI Automation Specialist
     </div>
   </footer>
 
@@ -493,7 +465,7 @@
       const subject = document.getElementById('subject').value.trim();
       const message = document.getElementById('message').value.trim();
 
-      const mailto = `mailto:luckyhassanbhutto@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+      const mailto = `mailto:hassandrz200@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
       window.location.href = mailto;
       this.reset();
     });
